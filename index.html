@@ -152,7 +152,7 @@
         <div class="works-grid" id="worksGrid">
             <article class="work-card" data-category="实战项目">
                 <div class="card-cover">
-                    <img src="iss/cover/Fishing Master.png" alt="Fishing Master" class="card-cover-img">
+                    <img src="iss/cover/001.png" alt="001" class="card-cover-img">
                     <span class="card-badge badge-project">实战项目</span>
                 </div>
                 <div class="card-body">
@@ -166,7 +166,7 @@
             </article>
             <article class="work-card" data-category="AI短剧">
                 <div class="card-cover">
-                    <img src="iss/cover/The SSS Hypnotist.png" alt="The SSS Hypnotist" class="card-cover-img">
+                    <img src="iss/cover/003.png" alt="003" class="card-cover-img">
                     <span class="card-badge badge-short-drama">AI短剧</span>
                 </div>
                 <div class="card-body">
@@ -180,7 +180,7 @@
             </article>
             <article class="work-card" data-category="商业广告">
                 <div class="card-cover">
-                    <img src="iss/cover/The Astronaut's Bouncy Universe.png" alt="The Astronaut's Bouncy Universe" class="card-cover-img">
+                    <img src="iss/cover/002.png" alt="002" class="card-cover-img">
                     <span class="card-badge badge-commercial">商业广告</span>
                 </div>
                 <div class="card-body">
@@ -194,7 +194,7 @@
             </article>
             <article class="work-card" data-category="3D动画">
                 <div class="card-cover">
-                    <img src="iss/cover/The Tale of the Twin Lamps.png" alt="The Tale of the Twin Lamps" class="card-cover-img">
+                    <img src="iss/cover/004.png" alt="004" class="card-cover-img">
                     <span class="card-badge badge-3d">3D动画</span>
                 </div>
                 <div class="card-body">
@@ -261,7 +261,7 @@
     window.closeModal=closeModal;
     document.querySelectorAll('.modal-overlay').forEach(o=>{o.addEventListener('click',e=>{if(e.target===o)closeModal(o.id)})});
     document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal-overlay.active').forEach(m=>closeModal(m.id))});
-    const vd={'brand-ad':{t:'《五十岁被赶出家门，我捕鱼为王》',ty:'实战项目',url:'vss/Fishing Master.mp4'},'short-drama':{t:'《招惹谁不好，你惹她？她可是SSS级催眠师》',ty:'AI短剧',url:'vss/The SSS Hypnotist.mp4'},'commercial':{t:'《太空人的duang宇宙》',ty:'商业广告',url:"vss/The Astronaut's Bouncy Universe.mp4"},'3d-animation':{t:'《双灯记》',ty:'3D动画',url:'vss/The Tale of the Twin Lamps.mp4'}};
+    const vd={'brand-ad':{t:'《五十岁被赶出家门，我捕鱼为王》',ty:'实战项目',url:'vss/001.mp4'},'short-drama':{t:'《招惹谁不好，你惹她？她可是SSS级催眠师》',ty:'AI短剧',url:'vss/003.mp4'},'commercial':{t:'《太空人的duang宇宙》',ty:'商业广告',url:"vss/002.mp4"},'3d-animation':{t:'《双灯记》',ty:'3D动画',url:'vss/004.mp4'}};
     window.openVideoModal=function(k){const d=vd[k];if(!d)return;const isVertical=['brand-ad','short-drama'].includes(k);const videoHtml=isVertical?'<div style="width:100%;max-height:calc(90vh - 100px);display:flex;align-items:center;justify-content:center;"><div style="max-width:360px;width:100%;aspect-ratio:9/16;background:#000;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;"><video src="'+d.url+'" controls controlsList="nodownload" style="max-width:100%;max-height:100%;object-fit:contain;" autoplay></video></div></div>':'<div style="width:100%;max-height:calc(90vh - 100px);background:#000;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;"><video src="'+d.url+'" controls controlsList="nodownload" style="max-width:100%;max-height:100%;object-fit:contain;" autoplay></video></div>';document.getElementById('videoModalBody').innerHTML='<h3 style="white-space:nowrap;text-align:center">'+d.t+'</h3><p style="color:var(--text-muted);margin-bottom:12px;text-align:center">类型：'+d.ty+'</p>'+videoHtml;document.getElementById('videoModal').querySelector('.modal-dialog').style.maxHeight='95vh';document.getElementById('videoModal').querySelector('.modal-dialog').style.overflow='hidden';document.getElementById('videoModal').querySelector('.modal-dialog').style.maxWidth=isVertical?'600px':'90vw';document.getElementById('videoModal').querySelector('.modal-dialog').style.width=isVertical?'90%':'100%';openModal('videoModal')};
     const dd={'brand-ad':{t:'《五十岁被赶出家门，我捕鱼为王》',tools:'image2 · LibTV · 剪映',p:'剧本创作 → 角色定型 → 场景生成 → 分镜拆解 → 抽卡制作 → 后期合成',h:'暴风雨中渔船濒临触礁，宋乘风冷静指挥全员协作化险为夷，正当众人因空网失落时，他一语反转留下悬念。'},'short-drama':{t:'《招惹谁不好，你惹她？她可是SSS级催眠师》',tools:'image2 · LibTV · 剪映',p:'剧本创作 → 角色定型 → 场景生成 → 分镜拆解 → 抽卡制作 → 后期合成',h:'弱娇实习生竟是 SSS 级催眠师，职场手扭邻辛富代财，夺感波超又兼具正向内格。'},'commercial':{t:'《太空人的duang宇宙》',tools:'LibTV · 剪映',p:'产品分析 → 创意生成 → 角色定位 → 多风格融合 → 分镜拆解 → 抽卡制作 → 后期合成',h:'打工人按压喜之郎果自动触发 duang 效应，距随太空人穿越三座风格迷异的压力星球逐层释放焦虑，以多元AIGC视觉演练释放压力，继续追梦的品牌内格。'},'3d-animation':{t:'《双灯记》',tools:'Seedance2.0 · LibTV · 剪映',p:'剧本设计 → 创建角色 → 脚本策划 → 抽卡制作 → 后期剪辑 → BGM生成',h:'红发异人携镇邪阳灯趔荒祀，与守子百年的灵母苏晚合力催动阴阳双灯净化石像魔，以东方奇幻美学演练母爱救救与信侠传承的宿命传说。'}};
     window.openDetailModal=function(k){const d=dd[k];if(!d)return;document.getElementById('detailModalBody').innerHTML='<h3>'+d.t+'</h3><p style="color:var(--text-muted)">工具：'+d.tools+'</p><h4 style="color:var(--accent);margin-top:16px">制作流程</h4><p>'+d.p+'</p><h4 style="color:var(--accent);margin-top:16px">核心亮点</h4><p>'+d.h+'</p>';openModal('detailModal')};
